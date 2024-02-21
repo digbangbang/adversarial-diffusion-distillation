@@ -250,7 +250,7 @@ s_noise_scheduler = DDPMScheduler(
     beta_start=0.0001,
     beta_end=1.0
 )
-# s_noise_scheduler.set_timesteps(num_inference_steps=4)
+
 
 S_optimizer = torch.optim.AdamW(S.parameters(), lr=config.student_learning_rate)
 D_optimizer = torch.optim.AdamW(D.parameters(), lr=config.discriminator_learning_rate)
